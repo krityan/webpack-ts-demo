@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/ractive"></script>
+    </head>
+    <body>
+        <div id="target"></div>
+
+        <script id="template", type="text/html">
+            <div id="main_title_container">
+                <h1 id="main_title">{{name}}</h1>
+            </div>
+            <h2 class="section_heading">Roster</h2>
+            <table class="roster_table">
+                <tr>
+                    <th>Name</th><th>Role</th><th>Class</th><th>Remove</th>
+                </tr>
+                {{#each raiders: num}}
+                    <tr class = {{charClass}}>
+                        <td>{{name}}</td>
+                        <td>{{role}}</td>
+                        <td>{{charClass}}</td>
+                        <td> <button id="removeMember" value={{num}} on-click="removeMember">Remove </button></td>
+                    </tr>
+                {{/each}}
+            </table>
+
+            <table class="roster_table">
+                <tr>
+                    <th>Role</th><th>Number of Raiders</th>
+                </tr>
+                <tr>
+                    <td>Tank</td><td>{{noTanks}}</td>
+                </tr>
+                <tr>
+                    <td>Healer</td><td>{{noHealers}}</td>
+                </tr>
+                <tr>
+                    <td>DPS</td><td>{{noDPS}}</td>
+                </tr>
+            </table>
+
+            <table class="roster_table">
+                <tr>
+                    <th>Name</th><th>Role</th><th>Class</th>
+                </tr>
+                <tr>
+                    <td><input type="text" id="newNameInput" class="removeMemInputField"></td>
+                    <td><input type="text" id="newRoleInput" class="removeMemInputField"></td>
+                    <td><input type="text" id="newClassInput" class="removeMemInputField"></td>
+                </tr>
+            </table>
+            <button id="submitMember" on-click="@.fire('addNewMember')">Submit</button>
+        </script>
+
+        <script src="bundle.js"></script>
+    </body>
+</html>

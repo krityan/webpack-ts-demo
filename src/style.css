@@ -1,0 +1,113 @@
+#main_title{
+    color:darkcyan;
+    text-align: center;
+    font-family: Verdana;
+}
+
+#main_title_container{
+    width: 100%;
+    position: sticky;
+    top: 0;
+    background-color: white;
+}
+
+.section_heading{
+    color: darkcyan;
+    text-align: center;
+    font-family: Verdana;
+}
+
+.roster_table{
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    border: 1px solid black;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.roster_table th{
+    color: white;
+    background-color: black;
+    font-size:20px;
+}
+/*
+#roster_table tr:nth-child(2n+1){
+    background-color:lightgray;
+}
+*/
+
+.roster_table th, .roster_table td {
+    border: 1px solid black;
+}
+/*
+#removeMember{
+    align-self: center;
+    outline: none;
+    border: none;
+    background-color: Transparent;
+}*/
+
+#submitMember{
+    width: 100%;
+    color: white;
+    background-color: black;
+    border: none;
+    font-size: 22px;
+}
+
+.miloPic{
+    width:100%;
+}
+
+tr.Death.Knight{
+    background-color: #C41F3B;
+    color:white;
+}
+
+tr.Demon.Hunter{
+    background-color: #A330C9;
+    color:white;
+}
+
+tr.Druid{
+    background-color: #FF7D0A;
+}
+
+tr.Hunter{
+    background-color: #ABD473;
+}
+
+tr.Mage{
+    background-color: #69CCF0;
+}
+
+tr.Monk{
+    background-color: #00FF96;
+}
+
+tr.Paladin{
+    background-color: #F58CBA;
+}
+
+tr.Priest{
+    background-color: #FFFFFF;
+}
+
+tr.Rogue{
+    background-color: #FFF569;
+}
+
+tr.Shaman{
+    background-color: #0070DE;
+    color:white;
+}
+
+tr.Warlock{
+    background-color: #9482C9;
+    color:white;
+}
+
+tr.Warrior{
+    background-color: #C79C6E;
+}
